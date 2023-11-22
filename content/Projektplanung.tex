@@ -1,0 +1,73 @@
+\chapter{Projektplanung}
+
+\section{Zeitbudget}
+Wie viel Stunden stehen für das Projekt zur Verfügung?
+
+\section{Zeitplan}
+    \begin{ganttchart}
+        [
+        hgrid,
+        vgrid={*6{white},*1{dotted}},
+        x unit=0.08cm,
+        y unit chart=0.8cm,
+            time slot format=isodate,
+        title label font=\footnotesize,
+        bar label font=\footnotesize,
+        bar/.append style={fill=blue!30},
+        milestone label font=\footnotesize,
+        milestone/.append style={fill=red},
+        milestone/.append style={xscale=5} 
+        ]{2024-01-01}{2024-06-20} % Start und Ende
+        \label{gantt:01}
+        % Jahre
+        \gantttitlecalendar{year, month=shortname}\\
+        % Arbeitspakete und Meilensteine
+        \ganttbar{Arbeitspaket 1}{2024-01-01}{2024-02-15}\\
+        \ganttmilestone{Meilenstein 1}{2024-01-15}\\
+        \ganttbar{Arbeitspaket 2}{2024-03-01}{2024-05-15}\\        
+        \ganttmilestone{Meilenstein 2}{2024-05-15}
+    \end{ganttchart}
+
+
+\subsection{Meilensteine}
+
+    \begin{tabular*}{\textwidth}{c l p{4cm} l}
+        \toprule
+        Nr. & Meilenstein & & Abgabedatum \\
+        \midrule \midrule
+        \ref{Ms:Bsp01}  & MS A   && 01.15.2024\\
+        \ref{Ms:Bsp02}  & MS B   && 05.15.2024\\
+        \bottomrule
+    \end{tabular*}
+    \\ [1em]
+    
+    \Meilenstein{MS A}\label{Ms:Bsp01}
+        Beschrieb\\
+        Datum: 15.01.2024\\
+    
+    \Meilenstein{MS B}\label{Ms:Bsp02}
+        Beschrieb\\
+        Datum: 15.05.2024\\
+
+
+\subsection{Detaillierte Arbeits- und Zeitplanung}
+
+    \Arbeitspaket{Arbeitspaket 1}
+        Inhalt, Ergebins, Meilenstein\\
+        
+    \Arbeitspaket{Arbeitspaket 2}
+        Inhalt, Ergebins, Meilenstein\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
